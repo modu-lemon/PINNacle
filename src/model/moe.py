@@ -54,6 +54,7 @@ class MoE(nn.Module):
         # Forward attribute passthrough for DeepXDE transforms if present
         self._input_transform = None
         self._output_transform = None
+        self.regularizer = None
 
     def forward(self, inputs):
         x = inputs
